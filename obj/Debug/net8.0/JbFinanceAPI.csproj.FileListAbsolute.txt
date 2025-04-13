@@ -160,3 +160,4 @@ C:\Users\tonia\source\repos\JbFinanceAPI\JbFinanceAPI\bin\Debug\net8.0\Swashbuck
 C:\Users\tonia\source\repos\JbFinanceAPI\JbFinanceAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\tonia\source\repos\JbFinanceAPI\JbFinanceAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\tonia\source\repos\JbFinanceAPI\JbFinanceAPI\obj\Debug\net8.0\JbFinanceAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\tonia\source\repos\JbFinanceAPI\JbFinanceAPI\obj\Debug\net8.0\JbFinanceAPI.sourcelink.json
