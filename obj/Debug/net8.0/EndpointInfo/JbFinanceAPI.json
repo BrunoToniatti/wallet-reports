@@ -150,6 +150,28 @@
         }
       }
     },
+    "/api/Pagamentos/categoria/{categoria}": {
+      "get": {
+        "tags": [
+          "Pagamentos"
+        ],
+        "parameters": [
+          {
+            "name": "categoria",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Usuarios": {
       "get": {
         "tags": [

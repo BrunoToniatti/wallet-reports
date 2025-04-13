@@ -84,5 +84,19 @@ namespace JbFinanceAPI.Controllers
 
             return Ok(resultado);
         }
+
+        // Filtro por categoria para pagamentos
+        // api/pagamentos/categoria/restaurante
+        [HttpGet("categoria/{categoria}")]
+        public IActionResult BuscarPorCategoria(string categoria)
+        {
+            // realiza como se fosse um WHERE dentro do banco de dados buscando da tabela de Pagamentos onde p(pagamentos).Categoria for igual a categoria informada
+            var resultado = _context.Pagamentos.Where(p => p.Categoria == categoria).ToList();
+
+            if (resultado == null || resultado.Count == 0)
+                return NotFound(new { mensagem = "Categoria não encontrada" });
+            
+            return Ok(resultado);
+        }
     }
 }

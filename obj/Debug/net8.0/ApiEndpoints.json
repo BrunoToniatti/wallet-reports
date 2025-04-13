@@ -69,6 +69,22 @@
   },
   {
     "ContainingType": "JbFinanceAPI.Controllers.PagamentosController",
+    "Method": "BuscarPorCategoria",
+    "RelativePath": "api/Pagamentos/categoria/{categoria}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "categoria",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JbFinanceAPI.Controllers.PagamentosController",
     "Method": "BuscarPorCpfCnpj",
     "RelativePath": "api/Pagamentos/cpfcnpj/{cpfcpnj}",
     "HttpMethod": "GET",
