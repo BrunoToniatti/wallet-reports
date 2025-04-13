@@ -68,6 +68,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "JbFinanceAPI.Controllers.PagamentosController",
+    "Method": "BuscarPorCpfCnpj",
+    "RelativePath": "api/Pagamentos/cpfcnpj/{cpfcpnj}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cpfcpnj",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "JbFinanceAPI.Controllers.UsuariosController",
     "Method": "ListarUsuarios",
     "RelativePath": "api/Usuarios",

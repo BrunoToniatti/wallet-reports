@@ -67,5 +67,22 @@ namespace JbFinanceAPI.Controllers
             _context.SaveChanges();
             return Ok(pagamento);
         }
+
+
+        // FILTROS
+
+
+        // Filtragem por CPF ou CNPJ
+        // api/pagamentos/cpfcnpj/12345678910
+        [HttpGet("cpfcnpj/{cpfcpnj}")]
+        public IActionResult BuscarPorCpfCnpj(string cpfcpnj)
+        {
+            var resultado = _context.Pagamentos.Where(p => p.CpfCnpj == cpfcpnj).ToList();
+
+            if (resultado == null || resultado.Count == 0)
+                return NotFound(new { mensagem = "Pagamento não encontrado" });
+
+            return Ok(resultado);
+        }
     }
 }
