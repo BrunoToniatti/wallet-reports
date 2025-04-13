@@ -1,0 +1,96 @@
+[
+  {
+    "ContainingType": "JbFinanceAPI.Controllers.PagamentosController",
+    "Method": "ObterTodos",
+    "RelativePath": "api/Pagamentos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JbFinanceAPI.Controllers.PagamentosController",
+    "Method": "CriarPagamento",
+    "RelativePath": "api/Pagamentos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "novoPagamento",
+        "Type": "JbFinanceAPI.Models.Pagamento",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JbFinanceAPI.Controllers.PagamentosController",
+    "Method": "AtualizarPagamento",
+    "RelativePath": "api/Pagamentos/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "pagamentoAtualizado",
+        "Type": "JbFinanceAPI.Models.Pagamento",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JbFinanceAPI.Controllers.PagamentosController",
+    "Method": "DeletarPagamento",
+    "RelativePath": "api/Pagamentos/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "pagamentoDeleteado",
+        "Type": "JbFinanceAPI.Models.Pagamento",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JbFinanceAPI.Controllers.UsuariosController",
+    "Method": "ListarUsuarios",
+    "RelativePath": "api/Usuarios",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JbFinanceAPI.Controllers.UsuariosController",
+    "Method": "CriarUsuarios",
+    "RelativePath": "api/Usuarios",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "novoUsuario",
+        "Type": "JbFinanceAPI.Models.Usuario",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
