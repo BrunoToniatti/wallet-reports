@@ -53,5 +53,21 @@ namespace JbFinanceAPI.Controllers
             return Ok(usuario);
         }
 
+        [HttpDelete("{id}")]
+        // DELETE: api/usuarios/id
+        // requisição para que o usuário consiga excluir seu usuário
+        public IActionResult DeletarUsuario(int id, [FromBody] Usuario usuarioDeletado)
+        {
+            var usuario = _context.Usuarios.FirstOrDefault(u => u.Id == id);
+
+            if (usuario == null)
+                return NotFound(new { mensagem = "Usuário não encontrado" });
+
+            _context.Usuarios.Remove(usuario);
+            _context.SaveChanges();
+
+            return Ok(usuario);
+        }
+
     }
 }
