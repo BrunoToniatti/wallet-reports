@@ -34,5 +34,24 @@ namespace JbFinanceAPI.Controllers
             return CreatedAtAction(nameof(ListarUsuarios), novoUsuario);
         }
 
+        [HttpPut("{id}")]
+        // PUT: api/usuarios/id
+        // requisição para atualizar o usuário
+
+        public IActionResult AtualizarUsuario(int id, [FromBody] Usuario usuarioAlterado)
+        {
+            var usuario = _context.Usuarios.FirstOrDefault(u => u.Id == id);
+
+            if (usuario == null)
+                return NotFound(new { mensagem = "Usuário não encontrado" });
+
+            usuario.Nome = usuarioAlterado.Nome;
+            usuario.Senha = usuarioAlterado.Senha;
+            usuario.Email = usuarioAlterado.Email;
+
+            _context.SaveChanges();
+            return Ok(usuario);
+        }
+
     }
 }
