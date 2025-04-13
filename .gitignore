@@ -1,0 +1,30 @@
+# Pastas geradas pelo build
+bin/
+obj/
+.vs/
+*.user
+
+# Banco de dados local
+*.db
+
+# Configurações locais do Visual Studio
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Logs
+*.log
+
+# Dados temporários
+*.tmp
+*.bak
+*.swp
+
+# Dados do Rider/ReSharper
+.idea/
+*.DotSettings
+
+# Configurações do sistema operacional
+.DS_Store
+Thumbs.db
