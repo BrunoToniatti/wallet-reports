@@ -98,5 +98,17 @@ namespace JbFinanceAPI.Controllers
             
             return Ok(resultado);
         }
+
+        // Filtro por valor
+        [HttpGet("valor/{valor}")]
+        public IActionResult BuscarPorValor(decimal valor)
+        {
+            var resultado = _context.Pagamentos.Where(p => p.Valor == valor).ToList();
+
+            if (resultado == null || resultado.Count == 0)
+                return NotFound(new { mensagem = "Valor não encontrado" });
+
+            return Ok(resultado);
+
     }
 }
