@@ -109,6 +109,6 @@ namespace JbFinanceAPI.Controllers
                 return NotFound(new { mensagem = "Valor não encontrado" });
 
             return Ok(resultado);
-
+        }
     }
 }
