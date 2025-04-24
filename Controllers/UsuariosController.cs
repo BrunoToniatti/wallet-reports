@@ -2,6 +2,11 @@
 using JbFinanceAPI.Models;
 using JbFinanceAPI.Data;
 using System.Linq;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
+
 
 namespace JbFinanceAPI.Controllers
 {
@@ -14,6 +19,37 @@ namespace JbFinanceAPI.Controllers
         public UsuariosController(AppDbContext context) 
         {
             _context = context; 
+        }
+
+        [HttpPost("login")]
+        public IActionResult Login([FromBody] LoginDTO login)
+        {
+            var usuario = _context.Usuarios.FirstOrDefault(u =>
+                u.Email == login.Login && u.Senha == login.Senha);
+
+            if (usuario == null)
+                return Unauthorized(new { mensagem = "Credenciais inválidas." });
+
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var key = Encoding.ASCII.GetBytes("chave_extramamente_forte_que_nem_a_nasa_sabeasokdmfasokdmfaoi931i90i23k9i4"); // mesma do Program.cs
+
+            var tokenDescriptor = new SecurityTokenDescriptor
+            {
+                Subject = new ClaimsIdentity(new[]
+                {
+            new Claim(ClaimTypes.Name, usuario.Email),
+            new Claim(ClaimTypes.NameIdentifier, usuario.Id.ToString())
+        }),
+                Expires = DateTime.UtcNow.AddHours(2),
+                SigningCredentials = new SigningCredentials(
+                    new SymmetricSecurityKey(key),
+                    SecurityAlgorithms.HmacSha256Signature)
+            };
+
+            var token = tokenHandler.CreateToken(tokenDescriptor);
+            var tokenString = tokenHandler.WriteToken(token);
+
+            return Ok(new { token = tokenString });
         }
 
         // GET: api/usuarios

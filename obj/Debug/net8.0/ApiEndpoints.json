@@ -100,6 +100,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "JbFinanceAPI.Controllers.PagamentosController",
+    "Method": "BuscarPorValor",
+    "RelativePath": "api/Pagamentos/valor/{valor}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "valor",
+        "Type": "System.Decimal",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "JbFinanceAPI.Controllers.UsuariosController",
     "Method": "ListarUsuarios",
     "RelativePath": "api/Usuarios",
@@ -162,6 +178,22 @@
       {
         "Name": "usuarioDeletado",
         "Type": "JbFinanceAPI.Models.Usuario",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "JbFinanceAPI.Controllers.UsuariosController",
+    "Method": "Login",
+    "RelativePath": "api/Usuarios/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "login",
+        "Type": "JbFinanceAPI.Models.LoginDTO",
         "IsRequired": true
       }
     ],

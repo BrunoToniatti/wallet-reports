@@ -161,3 +161,11 @@ C:\Users\tonia\source\repos\JbFinanceAPI\JbFinanceAPI\bin\Debug\net8.0\Swashbuck
 C:\Users\tonia\source\repos\JbFinanceAPI\JbFinanceAPI\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\tonia\source\repos\JbFinanceAPI\JbFinanceAPI\obj\Debug\net8.0\JbFinanceAPI.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\tonia\source\repos\JbFinanceAPI\JbFinanceAPI\obj\Debug\net8.0\JbFinanceAPI.sourcelink.json
+C:\Users\tonia\source\repos\JbFinanceAPI\JbFinanceAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\tonia\source\repos\JbFinanceAPI\JbFinanceAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\tonia\source\repos\JbFinanceAPI\JbFinanceAPI\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\tonia\source\repos\JbFinanceAPI\JbFinanceAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\tonia\source\repos\JbFinanceAPI\JbFinanceAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\tonia\source\repos\JbFinanceAPI\JbFinanceAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\tonia\source\repos\JbFinanceAPI\JbFinanceAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\tonia\source\repos\JbFinanceAPI\JbFinanceAPI\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll

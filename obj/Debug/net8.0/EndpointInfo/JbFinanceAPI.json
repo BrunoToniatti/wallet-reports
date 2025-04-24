@@ -172,6 +172,60 @@
         }
       }
     },
+    "/api/Pagamentos/valor/{valor}": {
+      "get": {
+        "tags": [
+          "Pagamentos"
+        ],
+        "parameters": [
+          {
+            "name": "valor",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "number",
+              "format": "double"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Usuarios/login": {
+      "post": {
+        "tags": [
+          "Usuarios"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Usuarios": {
       "get": {
         "tags": [
@@ -298,6 +352,20 @@
   },
   "components": {
     "schemas": {
+      "LoginDTO": {
+        "type": "object",
+        "properties": {
+          "login": {
+            "type": "string",
+            "nullable": true
+          },
+          "senha": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "Pagamento": {
         "type": "object",
         "properties": {
