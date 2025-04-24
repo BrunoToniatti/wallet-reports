@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JbFinanceAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3e6a89a024dd22b41c96a3fd4536fe9e17234bd0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5335829a5a6e25137826c9cb2dbdb1e17813cd1b")]
 [assembly: System.Reflection.AssemblyProductAttribute("JbFinanceAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JbFinanceAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
